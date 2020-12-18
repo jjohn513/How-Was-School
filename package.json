@@ -1,0 +1,25 @@
+{
+  "name": "how-was-school",
+  "version": "1.0.0",
+  "description": "default package",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjohn513/How-Was-School.git"
+  },
+  "author": "Jared",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjohn513/How-Was-School/issues"
+  },
+  "homepage": "https://github.com/jjohn513/How-Was-School#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "googleapis": "^39.2.0",
+    "inquirer": "^7.3.3",
+    "joi": "^13.1.0"
+  }
+}
