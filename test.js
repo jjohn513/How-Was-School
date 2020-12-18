@@ -5,6 +5,9 @@ const app = express()
 //JOI
 const Joi = require('joi')
 
+//prompt for user input
+const inquirer = require('inquirer')
+
 app.use(express.json());
 
 //Testing the server
@@ -31,20 +34,79 @@ const students = []
 
 //Create Classes
 const classes = [
-    {className: 'A', grade: 3, facultyMember: null, students: null, annoucements: null, assignments: null},
-    {className: 'B', grade: 1, facultyMember: null, students: null, annoucements: null, assignments: null},
-    {className: 'C', grade: 2, facultyMember: null, students: null, annoucements: null, assignments: null}
+    {classID: 100, classSection: 'A', grade: 3, facultyMember: null, students: null, annoucements: null, assignments: null},
+    {classID: 200, classSection: 'B', grade: 1, facultyMember: null, students: null, annoucements: null, assignments: null},
+    {classID: 300, classSection: 'C', grade: 2, facultyMember: null, students: null, annoucements: null, assignments: null}
 ]
 
 
 //Display courses
 app.get('/courses', (req, res) => {
     res.send(courses)
+
 })
 
-//Display Classes
+//Display classes
 app.get('/classes', (req, res) => {
 
+    //create response variable
+    let searchAnswer = null
+
+    //create prompt that asks the use which class they would like to view
+    const classSeach = () => {
+        inquirer
+        .prompt([{
+            type: 'list',
+            message: 'What Class information would you like to view?',
+            choices: ['Class A', 'Class B', 'Class C'],
+            name: 'choice'
+        }])
+        .then(res => {
+
+            if(res.choice === 'Class A'){
+                const myclass = classes.find(c => c.classID === 100)
+                searchAnswer = myclass
+                console.log(`Teacher: ${myclass.facultyMember}`)
+                console.log(`students: ${myclass.students}`)
+
+                if(!searchAnswer) {
+                        res.status(404).send('Could not find a course with that ID')
+                        console.log('cant find that one')
+                    }
+                return
+
+            }else if(res.choice === 'Class B'){
+                const myclass = classes.find(c => c.classID === 200)
+                searchAnswer = myclass
+                console.log(`Teacher: ${myclass.facultyMember}`)
+                console.log(`students: ${myclass.students}`)
+
+                if(!searchAnswer) {
+                        res.status(404).send('Could not find a course with that ID')
+                        console.log('cant find that one')
+                    }
+                return
+
+            }else if(res.choice === 'Class C'){
+                const myclass = classes.find(c => c.classID === 300)
+                searchAnswer = myclass
+                console.log(`Teacher: ${myclass.facultyMember}`)
+                console.log(`students: ${myclass.students}`)
+
+                if(!searchAnswer) {
+                        res.status(404).send('Could not find a course with that ID')
+                        console.log('cant find that one')
+                    }
+                return
+
+            }
+        })
+    
+    }
+    classSeach()
+
+    res.send(searchAnswer)
+    
     
 })
 
@@ -53,7 +115,7 @@ app.get('/courses/:id', (req, res) => {
 
     const courseName = courses.find(c => c.id === parseInt((req.params.name)))
     
-    if (!course) {
+    if (!courseName) {
         res.status(404).send('404: A course name does not match that id')
     }else{
         res.send(`The course name is: ${courseName.name}`)
