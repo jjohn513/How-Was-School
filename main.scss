@@ -1,0 +1,411 @@
+$mainRedColor: #ec5858;
+$mainBrownColor:#8f4d40;
+$mainBlueColor: #4b7fdf;
+$mainFont: 'Questrial', sans-serif;
+$secondaryFont: 'Frank Ruhl Libre', serif;
+$headerFont: 'Love Ya Like A Sister', cursive;
+$none: 0;
+$one: 1rem;
+$two: 2rem;
+$three: 3rem;
+$four: 4rem;
+$five: 5rem;
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+*{
+  margin: $none;
+  padding: $none;
+}
+
+
+body {
+  background-color: $mainRedColor;
+}
+
+.hwsLogo {
+  height: 5.5rem;
+  width: $five;
+  padding: 0 1.5rem;
+}
+
+.mainHeader {
+    height: 4.5rem;
+    width: 100%;
+    padding: .5rem;
+    background-color: #8f4d40;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: static;
+    p {
+      font-family: $headerFont;
+      font-size: $two;
+    }
+  }
+
+
+/* Hamburger Menu */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    margin: 0;
+    background-color:black;
+    top: 0;
+    right: -300px;
+    transition: right .5s cubic-bezier(1,0, 0, 1);
+    font-family: 'Questrial', sans-serif;
+    z-index: 5;
+}
+
+
+.hamburger--container {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    top: 13px;
+    right: 50px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index:10;
+}
+
+.line {
+    background-color:$mainRedColor;
+    width: $four;
+    height: 7px;
+    border-radius: 60px;
+    transition: all .5s;
+}
+
+.ul--navlist li{
+    margin: 50px;
+    text-align: center;
+}
+
+.ul--navlist li a{
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.ul--navlist li a:hover{
+    transition: 0.3s;
+    -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+    color: $mainRedColor;
+}
+
+.change{
+    right:0;
+    box-shadow: 2px 2px 20px black;
+    .line--1{
+      transform: rotateZ(-405deg) translate(-10px, 9px);
+  }
+  .line--2{
+    opacity: $none;
+}
+.line--3{
+  transform: rotateZ(405deg) translate(-10px, -9px);
+}
+.hamburger--container{
+  background-color: transparent;
+  transition: ease-in-out .8s;
+}
+}
+
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: $none;
+  left: $none;
+  right: $none;
+  bottom: $none;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+
+/* Home Page*/
+
+.teacherUpdateContainer {
+  background: $mainBlueColor;
+  height: 15.5rem;
+  margin: $four 7rem;
+  padding: $one;
+  border-radius: 30px;
+  animation-duration: 2s;
+  animation-name: bounceIn;
+
+  h2 {
+    font-family: $mainFont;
+    display: inline;
+    font-size: $two;
+  }
+  pre {
+    margin-top: 5px;
+    font-family: $secondaryFont;
+    display: inline;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+.teacherImg {
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 100%;
+  border: 1px solid black;
+  box-shadow: 5px 2px 6px black;
+}
+
+
+.teacherInfo{
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+
+  h2{
+    margin-left: $one;
+    margin-top: 40px;
+  }
+}
+
+
+.updateInfo{
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+.codingImg {
+  height: 6.5rem;
+  width: 6.5rem;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.optionsContainer {
+  display: inline;
+  margin: $one 7rem;
+  }
+
+.options{
+  display: inline-block;
+  width: 133px;
+  height: 133px;
+  text-align: center;
+  margin: $three $two;
+  margin-bottom: 7rem;
+  padding: $three;
+  box-shadow: 10px 10px 5px black;
+  border-radius: 100%;
+  background-image: linear-gradient(#da5353, orange);
+
+  p {
+    font-family: $mainFont;
+    font-size: $two;
+    color: black;
+    margin: $none;
+    padding: $none;
+  }
+  img {
+    width: $four;
+  }
+  img, p {
+    padding-top: $one;
+  }
+  a {
+   text-decoration: none;
+  }
+}
+
+.options:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  }
+
+  
+.updatesContainer{
+justify-content: center;
+text-align: center;
+
+img {
+  height: 35rem;
+  width: 75%;
+  border-radius: 5%;
+}
+h1 {
+  font-family: $mainFont;
+  font-size: $three;
+  margin-top: $four;
+}
+p{
+  font-family: $secondaryFont;
+  font-size: 1.3rem;
+  margin: $none $four;
+}
+} 
+
+iframe{
+  width:560px;
+  height: 315px;
+  margin-left: 33%;
+  margin-top: $two;
+}
+
+
+/* Back Button */
+
+.goBack {
+  display: flex;
+  margin: $two;
+  font-family: $mainFont;
+  background-color:$mainBlueColor;
+  border: none;
+  border-radius:1px 30px 30px 1px;
+  color: black;
+  padding: 5px 32px;
+  text-align: center;
+  font-size: $two;
+  margin: $two $none;
+  opacity: 1;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+
+  img{
+    height: 4.5rem;
+  }
+  p {
+    font-family: $mainFont;
+    font-size: $two;
+    display: inline;
+    justify-content: center ;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.goBack:hover{
+ opacity: 0.6;
+ transition: 0.3s;
+}
+
+/* Pages */
+
+.page{
+justify-content: center;
+vertical-align: center;
+text-align: center;
+} 
+
+.page h1 {
+  font-family: $mainFont;
+  font-size: 3.5rem;
+}
+
+.page p {
+  font-family: $secondaryFont;
+  font-size: $two;
+}
+
+.page img {
+  height: $five;
+  margin: $one;
+  margin-bottom: .5rem;
+}
+
+/* Calendar Page*/
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.calendarForm {
+    display:flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: pink;
+    padding: 20px;
+    width: 50%;
+  label{
+  color: black;
+  font-family: $mainFont;
+  
+}
+
+}
+/* FOOTER */
+footer {
+  height: 4.5rem;
+  width: 100%;
+  padding: .5rem;
+  margin-top: $four;
+  background-color: $mainBrownColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+
+  img {
+    height: 5.5rem;
+    width: $five;
+}
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <link rel="icon" href="Images/hwslogo.png">
+        <title>How was School?</title>
+    </head>
+
+    <style>
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 30px 25px;
+  width: 85%;
+  background: #2623e0;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+  width: 85%;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+  width: 85%;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+    </style>
+
+
+
+
+<body>
+    <nav class="mainHeader">
+        <img class="hwsLogo" src="Images/hwslogo.png" alt="Logo">
+       <p class="headerHeading"> How was School?</p>
+        <a href="index.html">  </a>
+        </nav>
+
+        <div class="goBack">
+            <a href="index.html"> <img src="Images/back.svg" alt="back arrow"> <p> Go back to Home Page</p></a>
+        </div>
+
+        <div class="page">
+    <h1> Welcome to your child's Calendar  <img src="Images/calendar.svg"> </h1>
+    <p>
+    Below are test dates, assignment due dates and other important days
+    </p>
+    </div>
+
+
+    <!-- Calendar Form -->
+    <div class="calendarForm">
+      <form action="/action_page.php">
+        <label for="eventName">Event Name</label>
+        <input type="text" id="eventName" >
+        
+
+        <form action="/action_page.php">
+      <label for="date">Event Date</label>
+      <input type="date" id="date" name="date">
+    </form>
+    
+    
+    <form action="/action_page.php">
+      <label for="startTime">Start Time:</label>
+      <input type="time" id="time" name="time">
+    </form>
+    
+
+    <form action="/action_page.php">
+      <label for="time">End Time:</label>
+      <input type="time" id="time" name="time">
+    </form>
+  
+        
+    <form action="/action_page.php">
+    <label for="description">Event Description</label>
+    <textarea id="description" name="description" rows="4" cols="50">
+      </textarea>
+      
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    
+<footer>
+  <img src="Images/hwslogo.png">
+</footer>
+</body>
+</html>
