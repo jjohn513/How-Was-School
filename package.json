@@ -1,0 +1,25 @@
+{
+  "name": "how-was-school",
+  "version": "1.0.0",
+  "description": "Hack-a-thon Project by Aaron Moua, Fatima Cruz, Nadia Berry &amp; Jared Johnson",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjohn513/How-Was-School.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjohn513/How-Was-School/issues"
+  },
+  "homepage": "https://github.com/jjohn513/How-Was-School#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}

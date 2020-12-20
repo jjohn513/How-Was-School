@@ -1,52 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="icon" href="Images/hwslogo.png">
-    <title>How was School?</title>
-</head>
+<!-- this is a partial for the head -->
+<%- include('./partials/head.ejs') %> 
+
 <body>
-    <!-- Header/NavBar -->
 
-    <nav class="mainHeader">
-        <img class="hwsLogo" src="Images/hwslogo.png" alt="Logo">
-       <p class="headerHeading"> How was School?</p>
-        <a href="index.html">  </a>
+<!-- used a partial for nav bar -->
 
-<!-- Hamburger Menu -->
-        <div class="container">
-          <header>
-              <nav class="navbar">
-                  <div class="hamburger--container" onclick="on()">
-                      <div class="line line--1"></div>
-                      <div class="line line--2"></div>
-                      <div class="line line--3"></div>
-                  </div>
-  
-                  <ul class="ul--navlist">
-                    <li><a href="#">Home</a></li>
-                      <li><a href="#">School Announcements</a></li>
-                      <li><a href="#">School Forum</a></li>
-                      <li><a href="#">Class Syllabus</a></li>
-                      <li><a href="#">Homework Resources</a></li>
-                      <li><a href="#"> After School Programs</a></li>
-                      <li><a href="#"> Contact the School</a></li>
-                  </ul>
-              </nav>
-              <div id="overlay" onclick="off()"></div>
-          </header>
-          
-      </div>
-
-      </nav>
+<%- include('./partials/nav.ejs') %> 
 
       <!-- Teacher Updates -->
  
       <div class="teacherUpdateContainer">
         <div class="teacherInfo">
-        <img class="teacherImg" src="Images/teacher.png">
+        <img class="teacherImg" src="/Images/teacher.png">
         <h2>Updates from Mrs. Teacher's Coding Class</h2>
       </div>
       <!-- pre = Preformatted text: -->
@@ -59,7 +26,7 @@
           Comfortable adding and controlling images and background images 
           </pre>
         
-            <img class="codingImg" src="Images/coding.svg" alt="coding">
+            <img class="codingImg" src="/Images/coding.svg" alt="coding">
           </div>
           </div>
       </div>
@@ -68,30 +35,30 @@
       <!-- Options Buttons -->
 
         <div class="optionsContainer">
-
+          <a href="/tutor">
           <div class="options">
-            <img src="images/grades.svg" alt="gradessvg">
-            <p> Grades </p>
+            <img src="/Images/grades.svg" alt="gradessvg">
+            <p> Tutor Sign Up </p>
           </div>
 
           <div class="options">
-            <a href="calendar.html">
-            <img src="images/calendar.svg" alt="optionssvg">
+            <a href="/calendar">
+            <img src="/Images/calendar.svg" alt="optionssvg">
             <p> Calendar </p>
             </a>
           </div> 
         
 
           <div class="options">
-            <a href="funds.html">
-            <img src="Images/funds.svg" alt="optionsvg">
+            <a href="/funds">
+            <img src="/Images/funds.svg" alt="optionsvg">
             <p> Funds </p>
           </a>
           </div>
 
   
           <div class="options">
-            <img src="Images/contact.svg" alt="contactsvg">
+            <img src="/Images/contact.svg" alt="contactsvg">
             <p> Contact </p>
           </div>
         </a>
@@ -101,7 +68,7 @@
         <!-- School Updates -->
 
         <div class="updatesContainer">
-          <img src="Images/img2.png">
+          <img src="/Images/img2.png">
           <h1>
             Remote Back-to-School Updates
           </h1>
@@ -124,12 +91,10 @@ Students in grades 9-12 will attend school in-person for testing the week of Dec
         </div>
   
         <iframe src="https://www.youtube.com/embed/9G_Bc-F71hg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <!-- Footer -->
-  <footer>
-    <img src="Images/hwslogo.png">
-  </footer>
 
+  <!-- footer partial.  -->
+  <%- include('partials/footer.ejs') %>
 
-  <script src="index.js"></script>
+  <script src="../js/index.js"></script>
 </body>
 </html>

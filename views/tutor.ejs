@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- this is a partial for the head -->
+  <%- include('./partials/head.ejs') %>
+
+  <body>
+    <nav class="mainHeader">
+      <img class="hwsLogo" src="../Images/hwslogo.png" alt="Logo" />
+      <p class="headerHeading">How was School?</p>
+      <a href="/"> </a>
+    </nav>
+
+    <div class="goBack">
+      <a href="/">
+        <img src="../Images/back.svg" alt="back arrow" />
+        <p>Go back to Home Page</p></a>
+      
+    </div>
+
+     <!--  if lgth is over 0 it will cycle the blogs w/ callback func. vanilla JS. serverside rendering -->
+     <!-- this is a tutor sign up form -->
+
+     <% if (tutor.length > 0) { %>
+          <% tutor.forEach(tutor => { %>
+            <h3 class = 'title'><%= tutor.title %></h3>
+            <p class = 'snippet'><%= tutor.snippet %></p>
+
+         <% })%>
+       <% } else { %>
+         <p> There are no tutors to show </p>
+       <% } %>
+
+    <!-- footer partial.  -->
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
