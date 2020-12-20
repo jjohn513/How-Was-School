@@ -16,20 +16,20 @@
         <p>Go back to Home Page</p></a>
       
     </div>
+<!-- Tutor sign up form -->
+    <form id ="tutorForm">
+      <label for="firstname"> Name </label>
+      <input type ="text" name="firstname">
+      <label for="lastname"> Last Name </label>
+      <input type ="text" name="lastname">
+      <label for="Email"> email </label>
+      <input type ="email" name="email">
 
-     <!--  if lgth is over 0 it will cycle the blogs w/ callback func. vanilla JS. serverside rendering -->
-     <!-- this is a tutor sign up form -->
+      <input type ="submit" name="submit">
+      
+    </form>
 
-     <% if (tutor.length > 0) { %>
-          <% tutor.forEach(tutor => { %>
-            <h3 class = 'title'><%= tutor.title %></h3>
-            <p class = 'snippet'><%= tutor.snippet %></p>
-
-         <% })%>
-       <% } else { %>
-         <p> There are no tutors to show </p>
-       <% } %>
-
+    
     <!-- footer partial.  -->
     <%- include('./partials/footer.ejs') %>
   </body>

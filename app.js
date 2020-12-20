@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 app.listen(3200);
 
 // middleware and static files
-app.use(express.static( "public"));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   // 2nd way.ejs view engine.
@@ -20,18 +20,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/tutor", (req, res) => {
-  const tutor = [
-    {
-      title: "What are you doing today?",
-      snippet: "Homework assignment number 1",
-    },
-    {
-      title: "What is the topic of the day?",
-      snippet: "Learning how to mutltiply",
-    },
-    { title: "What are your goals?", snippet: "Wakeup and make your bed" },
-  ];
-
   // 2nd way.ejs view engine.
   res.render("tutor", { title: "Home", tutor });
 });
@@ -45,8 +33,8 @@ app.get("/calendar", (req, res) => {
   res.render("calendar", { title: "Calendar" });
 });
 
-app.get("/funds", (req, res) => {
-  res.render("funds", { title: "Funds" });
+app.get("/donate", (req, res) => {
+  res.render("donate", { title: "Donate" });
 });
 
 //404 page  needs to go to the bottom. must use status(404).
