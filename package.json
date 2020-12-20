@@ -17,9 +17,15 @@
   },
   "homepage": "https://github.com/jjohn513/How-Was-School#readme",
   "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "googleapis": "^39.2.0",
     "inquirer": "^7.3.3",
-    "joi": "^13.1.0"
+    "joi": "^13.1.0",
+    "mongoose": "^5.11.8",
+    "parser": "^0.1.4",
+    "paypal-rest-sdk": "^1.8.1"
   }
 }
