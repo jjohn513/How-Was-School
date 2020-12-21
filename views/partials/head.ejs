@@ -6,7 +6,7 @@
           <link rel="stylesheet" type="text/css" href="/css/main.css">
           
             <!-- Dynamic EJS scrypting for title -->
-            <title>How was School? | <%= title %> </title>
+            <title>How was School? | <%= (typeof title != "undefined" ? title : "") %> </title>
             
           <link rel="icon" href="../../Images/hwslogo.png">
           
