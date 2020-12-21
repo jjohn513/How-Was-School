@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- this is a partial for the head -->
+    <%- include('./partials/head.ejs') %>
+
+<body>
+    <nav class="mainHeader">
+        <img class="hwsLogo" src="Images/hwslogo.png" alt="Logo">
+       <p class="headerHeading"> How was School?</p>
+        <a href="/">  </a>
+        </nav>
+
+        <div class="goBack">
+            <a href="/"> <img src="../Images/back.svg" alt="back arrow"> <p> Go back to Home Page</p></a>
+        </div>
+
+        <div class="page">
+    <h1> Calendar Event Adder <img src="../Images/calendar.svg"> </h1>
+    <p>
+    Here you can create a new event to add to your child's Google Calendar
+    </p>
+    </div>
+
+
+    <!-- Calendar Form -->
+    <div class="pageForm">
+      <h2>Add Calendar Event</h2>
+      <form action="/action_page.php">
+        <label for="eventName">Event Name</label>
+        <input type="text" id="eventName" >
+        
+
+        <form action="/action_page.php">
+      <label for="date">Event Date</label>
+      <input type="date" id="date" name="date">
+    </form>
+    
+    
+    <form action="/action_page.php">
+      <label for="startTime">Start Time:</label>
+      <input type="time" id="time" name="time">
+    </form>
+    
+
+    <form action="/action_page.php">
+      <label for="time">End Time:</label>
+      <input type="time" id="time" name="time">
+    </form>
+  
+        
+    <form action="/action_page.php">
+    <label for="description">Event Description</label>
+    <textarea id="description" name="description" rows="4" cols="50">
+      </textarea>
+      
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    
+<!-- footer partial.  -->
+<%- include('partials/footer.ejs') %>
+
+</body>
+
+</html>

@@ -1,2 +1,4 @@
 # How-is-School
-Hack-a-thon Project by Aaron Mua, Fatima Cruz, Nadia Berry &amp; Jared Johnson
+Hack-a-thon Project by Aaron Moua, Fatima Cruz, Nadia Berry &amp; Jared Johnson
+
+Another test run 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- this is a partial for the head -->
+<%- include('./partials/head.ejs') %> 
+
+<body>
+
+<!-- used a partial for nav bar -->
+
+<%- include('./partials/nav.ejs') %> 
+
+      <!-- Teacher Updates -->
+ 
+      <div class="teacherUpdateContainer">
+        <div class="teacherInfo">
+        <img class="teacherImg" src="/Images/teacher.png">
+        <h2>Updates from Mrs. Teacher's Coding Class</h2>
+      </div>
+      <!-- pre = Preformatted text: -->
+        <div class="updateInfo">
+        <pre> 
+          This week in class students will learn various tasks such as how to understand the use of semantic HTML
+          As well as explain the importance of web accessibility and use W3C validation 
+          Understand CSS selectors, combinators, the box model and how to positioning HTML elements
+          Differentiate between IDs, classes and pseudo-classes
+          Comfortable adding and controlling images and background images 
+          </pre>
+        
+            <img class="codingImg" src="/Images/coding.svg" alt="coding">
+          </div>
+          </div>
+      </div>
+
+
+      <!-- Options Buttons -->
+
+        <div class="optionsContainer">
+          <a href="/tutor">
+          <div class="options">
+            <img src="/Images/grades.svg" alt="gradessvg">
+            <p> Tutoring </p>
+          </div>
+
+          <div class="options">
+            <a href="/calendar">
+            <img src="/Images/calendar.svg" alt="optionssvg">
+            <p> Calendar </p>
+            </a>
+          </div> 
+        
+
+          <div class="options">
+            <a href="/donate">
+            <img src="/Images/funds.svg" alt="optionsvg">
+            <p> Donate </p>
+          </a>
+          </div>
+
+  
+          <div class="options">
+            <img src="/Images/contact.svg" alt="contactsvg">
+            <p> Contact </p>
+          </div>
+        </a>
+        </div>
+
+
+        <!-- School Updates -->
+
+        <div class="updatesContainer">
+          <img src="/Images/img2.png">
+          <h1>
+            Remote Back-to-School Updates
+          </h1>
+          <p>
+
+            The well-being, health and safety of students and staff is our highest priority. The COVID-19 situation is constantly evolving. We will use this site to post information and updates on the district's planning and preparation. Please see the information below and the tabs on the left of this page.
+            Under plan B, students will participate in a mix of in-classroom and remote learning. From an operational and academic standpoint, this plan will enable the most students to have a balance of in-classroom and remote learning while maintaining student and staff health and safety.
+
+
+
+Pre-K students whose families chose to have them participate in in-person instruction returned to school Oct. 12.
+
+K-5 students will be assigned to Group A or Group B. Group A students will attend in-person instruction Monday and Tuesday each week, beginning as early as Monday, Nov. 2. Students assigned to Group B will attend in-person instruction Thursday and Friday each week, beginning as early as Thursday, Nov. 5. For all K-5 students, Wednesdays will be remote-learning days.
+
+Students in grades 6-8 will attend in-classroom learning Monday-Friday during their assigned week, followed by two weeks of remote learning; one-third of each grade will attend their assigned schools in A week, a different one-third will attend in B week, and the remaining third will attend during C week. In-person instruction for grades 6-8 is scheduled to begin as early as Monday, Nov. 23.
+
+Students in grades 9-12 will attend school in-person for testing the week of Dec. 14, 2020. Beginning in the second semester (Jan. 2021), grades 9-12 will follow an A, B, C schedule, attending in-classroom learning Monday-Friday during their assigned week, followed by two weeks of remote learning.
+            
+          </p>
+        </div>
+  
+        <iframe src="https://www.youtube.com/embed/9G_Bc-F71hg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <!-- footer partial.  -->
+  <%- include('partials/footer.ejs') %>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>
