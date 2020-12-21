@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <!-- this is a partial for the head -->
+    
     <%- include('./partials/head.ejs') %>
-
+    <link rel="stylesheet" href="../public/css/calendar.css">
 <body>
     <nav class="mainHeader">
         <img class="hwsLogo" src="Images/hwslogo.png" alt="Logo">
@@ -22,10 +23,10 @@
     </div>
 
 
-    Calendar Form
-    <div class="form">
+    <!-- Calendar Form -->
+    <div class="calendar_form">
       <form action="http://localhost:3025/" method="POST">
-        <a class="button" target="_blank" rel="noopener noreferrer" href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&response_type=code&client_id=808233503594-c3isbglgijq2l1op2hviv9ojqg0sms5m.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&flowName=GeneralOAuthFlow">Sign In</a>
+        <a class="calendar_button" target="_blank" rel="noopener noreferrer" href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&response_type=code&client_id=808233503594-c3isbglgijq2l1op2hviv9ojqg0sms5m.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&flowName=GeneralOAuthFlow">Sign In</a>
          <span>You need to Sign In first</span><br><br>
         <label for="token">Paste the copied token here</label>
         <input name="token" type="text" placeholder="must be like this Jw65AJg05xiOGmkCld...">

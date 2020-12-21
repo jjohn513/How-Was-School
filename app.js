@@ -204,7 +204,7 @@ app.post('/', (req, res) =>{
       .catch((error) => {
         console.error(error)
       })
-      res.render('/events')
+      res.render('events')
   })
 
   app.get("/events", (req, res) => {
