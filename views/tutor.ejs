@@ -26,21 +26,22 @@
 
 
 <!-- Tutor sign up form -->
-    <form class="pageForm">
-      <h2> Tutor Sign-Up Form</h2>
-      <label for="firstname"> Name </label>
-      <input type ="text" name="firstname">
-      <label for="lastname"> Last Name </label>
-      <input type ="text" name="lastname">
-      <label for="Email"> Email Address </label>
-      <input type ="email" name="email">
-      <label for="Email"> What do you need help with? <label>
-      <input type="text" id="email" placeholder="Description"> </input>
-      <label for="Email"> Subject</label>
-      <input type="text" id="Subject" placeholder="Description"> </input>
-      <input type ="submit" name="submit">
-      
-    </form>
+<form action="/tutor" method="post" class="pageForm">
+
+  <h2> Tutor Sign-Up Form</h2>
+  <label for="firstname"> Name </label>
+  <input type ="text" name="firstname">
+  <label for="lastname"> Last Name </label>
+  <input type ="text" name="lastname">
+  <label for="email"> Email Address </label>
+  <input type ="email" name="email">
+  <label for="description"> What do you need help with? <label>
+  <input type="text" id="description" placeholder="Description"> </input>
+  <label for="subject"> Subject</label>
+  <input type="text" id="subject" placeholder="Subject"> </input>
+  <input type ="submit" name="submit">
+  
+</form>
 
     
     <!-- footer partial.  -->

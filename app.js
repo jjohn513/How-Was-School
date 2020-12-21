@@ -2,8 +2,18 @@ const express = require("express");
 const app = express();
 const path = require('path')
 const bodyParser = require('body-parser')
+const paypal = require('paypal-rest-sdk')
+const mongo = require('./public/js/mongo')
+const userSchema = require('./public/js/schemas/user-schema')
 
 let var_arr = ['Refresh the browser to see your events!']
+
+//configure paypal api
+paypal.configure({
+  'mode': 'sandbox', //sandbox or live
+  'client_id': 'Abx9eip8NMYAbzTDvwsZXwR8ZN1hxrHZiv6sycHpCKQoJjCpw_2Ph_KJ6yEmPgow5iSV-qnTAuPBlmbZ',
+  'client_secret': 'EMsblehmrYEl_knQMXqqtlfpYPUshBZrMsdUjv4ifXHQIqyAX47WOzXzp4JUwIlJlI3wzHZKaZ7hctRt'
+});
 
 
 app.set("view engine", "ejs");
@@ -219,7 +229,108 @@ app.get("/donate", (req, res) => {
   res.render("donate", { title: "Donate" });
 });
 
+//post method for paypal
+app.post('/pay', (req, res) => {
 
+  const create_payment_json = {
+      "intent": "sale",
+      "payer": {
+          "payment_method": "paypal"
+      },
+      "redirect_urls": {
+          "return_url": "http://localhost:3025/success",
+          "cancel_url": "http://localhost:3025/fail"
+      },
+      "transactions": [{
+          "item_list": {
+              "items": [{
+                  "name": "Donation",
+                  "sku": "item",
+                  "price": "5.00",
+                  "currency": "USD",
+                  "quantity": 1
+              }]
+          },
+          "amount": {
+              "currency": "USD",
+              "total": "5.00"
+          },
+          "description": "$5 Donation to How-Was-School"
+      }]
+  };
+
+  paypal.payment.create(create_payment_json, function (error, payment) {
+      if (error) {
+          throw error;
+      } else {
+          for(let i = 0; i < payment.links.length; i++){
+              if(payment.links[i].rel === 'approval_url')
+              res.redirect(payment.links[i].href)
+
+          }
+      }
+  });
+  
+})
+
+//success/fail for paypal
+app.get('/success', (req, res) => {
+
+
+  const payerId = req.query.PayerID
+
+  const paymentId = req.query.paymentId
+
+  const execute_payment_json = {
+      "payer_id": payerId,
+      'transactions': [{
+          "amount" : {
+              "currency": "USD",
+              "total": "5.00"
+          }
+          
+      }]
+  }
+
+  paypal.payment.execute(paymentId, execute_payment_json, (error, payment) => {
+      if(error) {
+          console.log(error.response)
+          throw error
+      } else {
+          console.log('Get Payment Response')
+          console.log(JSON.stringify(payment))
+          res.render('donate.ejs')
+      }
+  })
+})
+
+app.get('/fail', (req, res) => res.send('Donation Failed! Please Try Again.'))
+
+//post method for signup
+app.post('/tutor', (req, res) => {
+  
+  const connectToMongoDB = async () => {
+    await mongo().then(async (mongoose) => {
+      try{
+        console.log('connected to mongo db')
+  
+        const user = {
+          firstName: req.body.firstName,
+          lastName: req.body.lastName,
+          email: req.body.email,
+          subject: req.body.subject,
+          description: req.body.description,
+        }
+  
+        await new userSchema(user).save()
+      }finally{
+        mongoose.connection.close()
+      }
+    })
+  }
+  
+  connectToMongoDB()
+})
 
 
 
