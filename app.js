@@ -21,13 +21,9 @@ app.get("/", (req, res) => {
 
 app.get("/tutor", (req, res) => {
   // 2nd way.ejs view engine.
-  res.render("tutor", { title: "Home", tutor });
+  res.render("tutor", { title: "Tutor", });
 });
 
-app.get("/tutor", (req, res) => {
-  // res.send('<p>grades page</p>');
-  res.render("tutor", { title: "Tutor" });
-});
 
 app.get("/calendar", (req, res) => {
   res.render("calendar", { title: "Calendar" });
