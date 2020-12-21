@@ -17,7 +17,6 @@ paypal.configure({
 
 
 app.set("view engine", "ejs");
-
 // middleware and static files
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, 'public')))
@@ -299,8 +298,11 @@ app.get('/success', (req, res) => {
       } else {
           console.log('Get Payment Response')
           console.log(JSON.stringify(payment))
-          res.render('donate.ejs')
+          res.render('success')
       }
+  })
+  app.get("/success", (req, res) => {
+    res.render("success", {title: "Success"})
   })
 })
 
@@ -308,7 +310,7 @@ app.get('/fail', (req, res) => res.send('Donation Failed! Please Try Again.'))
 
 //post method for signup
 app.post('/tutor', (req, res) => {
-  
+
   const connectToMongoDB = async () => {
     await mongo().then(async (mongoose) => {
       try{
