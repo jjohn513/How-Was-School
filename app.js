@@ -149,10 +149,10 @@ app.post('/', (req, res) =>{
   
       const calendar = google.calendar({version: 'v3', auth: oAuth2Client})
      const eventStartTime = new Date()
-      eventStartTime.setDate(eventStartTime.getDay() + 10)
+      eventStartTime.setDate(eventStartTime.getDay() + 2)
   
       const eventEndTime = new Date()
-      eventEndTime.setDate(eventEndTime.getDay() + 10)
+      eventEndTime.setDate(eventEndTime.getDay() + 2)
       eventEndTime.setMinutes(eventEndTime.getMinutes()+ 60)
   
       const event = {
