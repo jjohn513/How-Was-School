@@ -1,6 +1,6 @@
 $mainRedColor: #ec5858;
 $mainBrownColor:#8f4d40;
-$mainBlueColor: #4b7fdf;
+$mainBlueColor: #7298de;
 $mainFont: 'Questrial', sans-serif;
 $secondaryFont: 'Frank Ruhl Libre', serif;
 $headerFont: 'Love Ya Like A Sister', cursive;
@@ -49,7 +49,7 @@ body {
     height: 4.5rem;
     width: 100%;
     padding: .5rem;
-    background-color: #8f4d40;
+    background-color: $mainRedColor;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -57,6 +57,7 @@ body {
     p {
       font-family: $headerFont;
       font-size: $two;
+      margin-top: 20px;
     }
   }
 
@@ -97,7 +98,7 @@ body {
 }
 
 .line {
-    background-color:$mainRedColor;
+    background-color:$mainBlueColor;
     width: $four;
     height: 7px;
     border-radius: 60px;
@@ -120,7 +121,7 @@ body {
     -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
-    color: $mainRedColor;
+    color: $mainBlueColor;
 }
 
 .change{
@@ -156,7 +157,6 @@ body {
   cursor: pointer;
 }
 
-
 /* Home Page*/
 
 .teacherUpdateContainer {
@@ -173,21 +173,25 @@ body {
     display: inline;
     font-size: $two;
   }
-  pre {
+  ul{
     margin-top: 5px;
     font-family: $secondaryFont;
     display: inline;
     text-align: center;
     font-size: 1.2rem;
   }
+  li{
+    list-style: none;
+  }
 }
 
 .teacherImg {
-  height: 5.5rem;
-  width: 5.5rem;
+  height: $five;
+  width: $five;
   border-radius: 100%;
   border: 1px solid black;
   box-shadow: 5px 2px 6px black;
+  margin-bottom: 10px;
 }
 
 
@@ -266,7 +270,7 @@ text-align: center;
 
 img {
   height: 35rem;
-  width: 75%;
+  width: 85%;
   border-radius: 5%;
 }
 h1 {
@@ -292,8 +296,6 @@ iframe{
 /* Back Button */
 
 .goBack {
-  display: flex;
-  margin: $two;
   font-family: $mainFont;
   background-color:$mainBlueColor;
   border: none;
@@ -315,11 +317,15 @@ iframe{
     font-family: $mainFont;
     font-size: $two;
     display: inline;
-    justify-content: center ;
+    justify-content: center;
+    margin-left: $one;
   }
   a {
     text-decoration: none;
     color: black;
+    display:flex;
+    align-items: center;
+   
   }
 }
 
@@ -329,6 +335,14 @@ iframe{
 }
 
 /* Pages */
+hero{
+
+  img{
+    width: 100%;
+    height: 27rem;
+  }
+}
+
 
 .page{
 justify-content: center;
@@ -350,6 +364,10 @@ img {
   margin-bottom: .5rem;
 }
 } 
+
+.tutoring img{
+  height: 30rem;
+}
 
 // Form CSS
 input[type=text], input[type=email], select {
@@ -427,8 +445,8 @@ input {
   font-family: $mainFont;
   color: black;
 	font-weight: 500;
-	font-size: $three;
-	margin-top: 30px;
+	font-size: $four;
+	margin-top: 50px;
 }
 
 .donation-box {
@@ -456,8 +474,8 @@ input {
 	color:white;
 	text-align: center;
 	padding-top: 12px;
-	padding-bottom: 12px;
-	font-size: 15px;
+  padding-bottom: 12px;
+  font-size: $two;
 }
 
 .donation-box .donate-button {
@@ -472,6 +490,7 @@ input {
 	position: absolute;
 	cursor: pointer;
   font-weight: 800;
+  font-family: $mainFont;
 }
 
 .donation-box .fields {
@@ -479,7 +498,8 @@ input {
 	display: block;
 	position: absolute;
 	top: 60px;
-	left: 15px;
+  left: 15px;
+  margin-top: 50px;
 }
 
 .donation-box .fields input {
@@ -520,7 +540,8 @@ input {
 	display: block;
 	position: absolute;
 	top: 60px;
-	right: 15px;
+  right: 15px;
+  margin-top: 45px
 }
 
 .donation-box .amount .button {
@@ -571,60 +592,6 @@ input {
 	transition: all 0.15s ease-out;
 }
 
-.set-amount {
-	max-width: 96px;
-}
-
-
-.checkboxes {
-  margin: $four auto;
-	position: absolute;
-	top: 175px;
-	left: 13px;
-}
-
-.checkboxes label {
-	position: relative;
-	top: -8px;
-	font-size: 13px;
-  color: gray;
-  margin-bottom: $three;
-}
-
-.checkbox {
-	-webkit-appearance: none;
-	background-color: #fafafa;
-	border: 1px solid $mainBlueColor;
-	padding: 9px;
-	border-radius: 3px;
-	display: inline-block;
-	position: relative;
-  outline: none;
-	
-	-webkit-transition: all 0.15s ease-out;
-	-moz-transition: all 0.15s ease-out;
-	-o-transition: all 0.15s ease-out;
-	transition: all 0.15s ease-out;
-}
-
-.checkbox:active, .checkbox:checked:active {
-	
-}
-
-.checkbox:checked {
-	background-color: #C1D82F;
-	border: 1px solid #C1D82F;
-	color: white;
-}
-
-.checkbox:checked:after {
-	content: '\2714';
-	font-size: 14px;
-	position: absolute;
-	top: 0px;
-	left: 3px;
-	color: white;
-}
 
 .confirm {
 	display: none;

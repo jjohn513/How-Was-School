@@ -99,7 +99,7 @@ Ongoing project and will continue to add more features in the future.
 
  # How was School 
 
-![Project Image](hwslogo.png)
+![Project Image](public/Images/hwslogo.png)
 
 ---
 

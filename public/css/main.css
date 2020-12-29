@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
@@ -34,7 +33,7 @@ body {
   height: 4.5rem;
   width: 100%;
   padding: 0.5rem;
-  background-color: #8f4d40;
+  background-color: #ec5858;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -43,6 +42,7 @@ body {
 .mainHeader p {
   font-family: "Love Ya Like A Sister", cursive;
   font-size: 2rem;
+  margin-top: 20px;
 }
 
 /* Hamburger Menu */
@@ -80,7 +80,7 @@ body {
 }
 
 .line {
-  background-color: #ec5858;
+  background-color: #7298de;
   width: 4rem;
   height: 7px;
   border-radius: 60px;
@@ -103,7 +103,7 @@ body {
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
-  color: #ec5858;
+  color: #7298de;
 }
 
 .change {
@@ -140,7 +140,7 @@ body {
 
 /* Home Page*/
 .teacherUpdateContainer {
-  background: #4b7fdf;
+  background: #7298de;
   height: 15.5rem;
   margin: 4rem 7rem;
   padding: 1rem;
@@ -153,20 +153,24 @@ body {
   display: inline;
   font-size: 2rem;
 }
-.teacherUpdateContainer pre {
+.teacherUpdateContainer ul {
   margin-top: 5px;
   font-family: "Frank Ruhl Libre", serif;
   display: inline;
   text-align: center;
   font-size: 1.2rem;
 }
+.teacherUpdateContainer li {
+  list-style: none;
+}
 
 .teacherImg {
-  height: 5.5rem;
-  width: 5.5rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 100%;
   border: 1px solid black;
   box-shadow: 5px 2px 6px black;
+  margin-bottom: 10px;
 }
 
 .teacherInfo {
@@ -240,7 +244,7 @@ body {
 }
 .updatesContainer img {
   height: 35rem;
-  width: 75%;
+  width: 85%;
   border-radius: 5%;
 }
 .updatesContainer h1 {
@@ -263,10 +267,8 @@ iframe {
 
 /* Back Button */
 .goBack {
-  display: flex;
-  margin: 2rem;
   font-family: "Questrial", sans-serif;
-  background-color: #4b7fdf;
+  background-color: #7298de;
   border: none;
   border-radius: 1px 30px 30px 1px;
   color: black;
@@ -287,10 +289,13 @@ iframe {
   font-size: 2rem;
   display: inline;
   justify-content: center;
+  margin-left: 1rem;
 }
 .goBack a {
   text-decoration: none;
   color: black;
+  display: flex;
+  align-items: center;
 }
 
 .goBack:hover {
@@ -299,6 +304,11 @@ iframe {
 }
 
 /* Pages */
+hero img {
+  width: 100%;
+  height: 27rem;
+}
+
 .page {
   justify-content: center;
   vertical-align: center;
@@ -316,6 +326,10 @@ iframe {
   height: 5rem;
   margin: 1rem;
   margin-bottom: 0.5rem;
+}
+
+.tutoring img {
+  height: 30rem;
 }
 
 input[type=text], input[type=email], select {
@@ -389,8 +403,8 @@ input[type=submit]:hover {
   font-family: "Questrial", sans-serif;
   color: black;
   font-weight: 500;
-  font-size: 3rem;
-  margin-top: 30px;
+  font-size: 4rem;
+  margin-top: 50px;
 }
 
 .donation-box {
@@ -409,7 +423,7 @@ input[type=submit]:hover {
 }
 
 .donation-box .title {
-  background-color: #4b7fdf;
+  background-color: #7298de;
   width: 100%;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -417,11 +431,11 @@ input[type=submit]:hover {
   text-align: center;
   padding-top: 12px;
   padding-bottom: 12px;
-  font-size: 15px;
+  font-size: 2rem;
 }
 
 .donation-box .donate-button {
-  background-color: #4b7fdf;
+  background-color: #7298de;
   width: 100%;
   color: white;
   text-align: center;
@@ -432,6 +446,7 @@ input[type=submit]:hover {
   position: absolute;
   cursor: pointer;
   font-weight: 800;
+  font-family: "Questrial", sans-serif;
 }
 
 .donation-box .fields {
@@ -440,6 +455,7 @@ input[type=submit]:hover {
   position: absolute;
   top: 60px;
   left: 15px;
+  margin-top: 50px;
 }
 
 .donation-box .fields input {
@@ -483,6 +499,7 @@ input[type=submit]:hover {
   position: absolute;
   top: 60px;
   right: 15px;
+  margin-top: 45px;
 }
 
 .donation-box .amount .button {
@@ -531,55 +548,6 @@ input[type=submit]:hover {
   transition: all 0.15s ease-out;
 }
 
-.set-amount {
-  max-width: 96px;
-}
-
-.checkboxes {
-  margin: 4rem auto;
-  position: absolute;
-  top: 175px;
-  left: 13px;
-}
-
-.checkboxes label {
-  position: relative;
-  top: -8px;
-  font-size: 13px;
-  color: gray;
-  margin-bottom: 3rem;
-}
-
-.checkbox {
-  -webkit-appearance: none;
-  background-color: #fafafa;
-  border: 1px solid #4b7fdf;
-  padding: 9px;
-  border-radius: 3px;
-  display: inline-block;
-  position: relative;
-  outline: none;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  -o-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-
-.checkbox:checked {
-  background-color: #C1D82F;
-  border: 1px solid #C1D82F;
-  color: white;
-}
-
-.checkbox:checked:after {
-  content: "✔";
-  font-size: 14px;
-  position: absolute;
-  top: 0px;
-  left: 3px;
-  color: white;
-}
-
 .confirm {
   display: none;
   position: absolute;
@@ -617,7 +585,7 @@ footer img {
 }
 
 .calendar_button {
-  background-color: #4CAF50;
+  background-color: #7298de;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -626,19 +594,25 @@ footer img {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
+  font-family: "Questrial", sans-serif;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .calendar_form {
-  margin: 0 200px;
+  margin: 2rem 450px;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 15px 30px;
+  font-family: "Questrial", sans-serif;
+  width: 35%;
+  border-radius: 7px;
 }
 
 span {
   color: red;
   margin-left: 20px;
+  font-family: "Frank Ruhl Libre", serif;
 }
 
 input[type=email],
@@ -649,18 +623,20 @@ select {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #7298de;
   color: white;
   padding: 14px 20px;
   margin: 15px 0;
   border: none;
   border-radius: 4px;
+  font-family: "Questrial", sans-serif;
+  font-size: 1rem;
   cursor: pointer;
 }
 

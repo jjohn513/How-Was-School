@@ -1,5 +1,15 @@
+.eventsPage{
+
+  #successGif{
+    display: inline-block;
+    margin: 3rem 20rem;
+    width: 50rem;
+  }
+      
+}
+
 .calendar_button {
-          background-color: #4CAF50;
+          background-color: $mainBlueColor;
           border: none;
           color: white;
           padding: 15px 32px;
@@ -8,18 +18,24 @@
           display: inline-block;
           font-size: 16px;
           margin: 4px 2px;
+          font-family: $mainFont;
+          border-radius: 10px;
           cursor: pointer;
         }
         
         .calendar_form{
-          margin: 0 200px;
+          margin: $two 450px;
           border-radius: 5px;
           background-color: #f2f2f2;
           padding: 15px 30px;
+          font-family: $mainFont;
+          width: 35%;
+          border-radius: 7px;
         } 
         span {
           color: red;
           margin-left: 20px;
+          font-family: $secondaryFont;
         }
         
         input[type=email],
@@ -30,17 +46,19 @@
           margin: 8px 0;
           display: inline-block;
           border: 1px solid #ccc;
-          border-radius: 4px;
+          border-radius: 10px;
           box-sizing: border-box;
         }
         input[type=submit] {
           width: 100%;
-          background-color: #4CAF50;
+          background-color: $mainBlueColor;
           color: white;
           padding: 14px 20px;
           margin: 15px 0;
           border: none;
           border-radius: 4px;
+          font-family: $mainFont;
+          font-size: $one;
           cursor: pointer;
         }
         input[type=submit]:hover {
